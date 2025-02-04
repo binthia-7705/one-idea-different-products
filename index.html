@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Study Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Banner Section -->
+        <div class="banner">
+            <h1>Exam Study Planner</h1>
+            <h2>Plan your study with ease!</h2>
+            <p class="catchy-line">Stay focused, stay on track, and ace your exams with a solid plan!</p>
+        </div>
+
+        <!-- Form for user inputs -->
+        <form id="study-form">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" required>
+
+            <label for="exam-date">Date of Exam:</label>
+            <input type="date" id="exam-date" required>
+
+            <label for="syllabus">Syllabus (e.g., Topic 1, Topic 2, ...):</label>
+            <textarea id="syllabus" required></textarea>
+
+            <label for="study-time">Study Time per Day (in hours):</label>
+            <input type="number" id="study-time" min="1" required>
+
+            <button type="submit">Generate Study Plan</button>
+        </form>
+
+        <!-- Progress Bar -->
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div id="study-plan">
+            <h2>Your Study Planner:</h2>
+            <ul id="plan-list"></ul>
+        </div>
+
+        <div id="timer">
+            <h2>Countdown Timer to Exam:</h2>
+            <div id="countdown"></div>
+        </div>
+
+        <div id="resources">
+            <h2>Resources:</h2>
+            <button onclick="window.location.href='https://www.example.com/notes'">View Notes</button>
+            <button onclick="window.location.href='https://www.example.com/pyqs'">View Previous Year Questions (PYQs)</button>
+        </div>
+
+        <!-- Custom Popup for completion message -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span id="popup-close" class="popup-close">&times;</span>
+                <h2>Great job! You've completed this section! 🎉</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
